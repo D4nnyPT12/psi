@@ -78,7 +78,21 @@ string.replace(valor_antigo, novo_valor, conta)
 - isascii()	Returns True if all characters in the string are ascii characters
 - isdecimal()	Returns True if all characters in the string are decimals
 - isdigit()	Returns True if all characters in the string are digits
-- isidentifier()	Returns True if the string is an identifier
+- isidentifier()	
+a = "_Teste"
+b = "teste2"
+c = "Teste 2"
+d = "2Teste"
+
+print (a.isidentifier()) # True
+print (b.isidentifier()) # True 
+print (c.isidentifier()) # False
+print (d.isidentifier()) # False
+
+#Uma string é considerada "True" se contiver apenas letras alfanuméricas (a-z) e (0-9) ou sublinhados (_).
+#Para a string ser válido não pode começar com um número ou conter espaços.
+#As variaveis "c" e "d" são falsas porque contem espaços e ou começam com um numero.
+
 - islower()	Returns True if all characters in the string are lower case
 - isnumeric()	Returns True if all characters in the string are numeric
 - isprintable()	Returns True if all characters in the string are printable
