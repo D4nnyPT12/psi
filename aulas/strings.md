@@ -78,14 +78,98 @@ string.replace(valor_antigo, novo_valor, conta)
 - isascii()	Returns True if all characters in the string are ascii characters
 - isdecimal()	Returns True if all characters in the string are decimals
 - isdigit()	Returns True if all characters in the string are digits
-- isidentifier()	Returns True if the string is an identifier
-- islower()	Returns True if all characters in the string are lower case
-- isnumeric()	Returns True if all characters in the string are numeric
-- isprintable()	Returns True if all characters in the string are printable
-- isspace()	Returns True if all characters in the string are whitespaces
-- istitle()	Returns True if the string follows the rules of a title
-- isupper()	Returns True if all characters in the string are upper case
-- join()	Converts the elements of an iterable into a string
+----isidentifier()----
+a = "_Teste"
+b = "teste2"
+c = "Teste 2"
+d = "2Teste"
+
+print (a.isidentifier()) #True
+print (b.isidentifier()) #True
+print (c.isidentifier()) #False
+print (d.isidentifier()) #False
+
+#Uma string é considerada "True" se contiver apenas letras alfanuméricas (a-z) e (0-9) ou sublinhados (_).
+#Para a string ser válido não pode começar com um número ou conter espaços.
+#As variaveis "c" e "d" são falsas porque contem espaços e ou começam com um numero.
+
+----islower()----
+a = 'ola pedro tens 17 anos!'
+b = 'ola joana!'
+c = 'ola João tens 17 anos!'
+d = 'Ola Joana!'
+print(a.islower()) #True
+print(b.islower()) #True
+print(c.islower()) #False
+print(d.islower()) #False
+#A função islower() retorna "True" se todos os caracteres estiverem em minúsculas, caso contrário, retorna "False".
+
+----isnumeric()----
+a = '123'
+b = 'abc'
+c = 'o0a4'
+d = '6iv7'
+
+print(a.isnumeric()) #True
+print(b.isnumeric()) #False
+print(c.isnumeric()) #False
+print(d.isnumeric()) #False
+
+----isprintable()----
+exemplo1 = 'O meu nome é Davi'
+exemplo2 = 'Olá! \n O meu nome é Davi'
+exemplo3 = ' '
+
+print(exemplo1.isprintable()) #True
+print(exemplo2.isprintable()) #False
+print(exemplo3.isprintable()) #True
+
+----isspace()----
+texto1 = "    "
+texto2 = " a  "
+
+x1 = texto1.isspace()
+x2 = texto2.isspace()
+
+print(x1) #True
+print(x2) #False
+
+#retorna true se o texto da string tiver apenas "espaço"
+
+----istitle()----
+txt1 = "Olá, E Bem Vindos Ao Meu Mundo!"
+txt2 = "Olá e bem vindos ao Meu Mundo!"
+
+x = txt1.istitle()
+x2 = txt2.istitle()
+print(x) #True
+print(x2) #False
+
+#retorna True se todas as palavras da string começam com uma letra maiúscula e
+#o resto da string são letras minúsculas, caso contrário, False.
+
+----isupper()----
+txt1 = "THIS IS NOW!"
+txt2 = "Bora Lá"
+
+x = txt1.isupper() #True
+
+x2= txt2.isupper() #False
+
+print(x)
+print(x2)
+
+#Se a string conter apenas letras maiusculas dá "True" caso contrário "False"
+
+---- join()----
+tuplo = ("John", "Wick", "3")
+
+x = "-".join(tuplo)
+
+print(x) #JOhn-Wick-3
+
+#Esta função adiciona o texto inserido entre as strings
+
 - ljust()	Returns a left justified version of the string
 - lower()	Converts a string into lower case
 - lstrip()	Returns a left trim version of the string
